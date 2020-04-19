@@ -4,9 +4,9 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :description
       t.bool :event_flag
-      t.int :event_creator
-      t.int :event_day
-      t.bool :private
+      t.integer :event_creator
+      t.integer :event_day
+      t.boolean :private
 
       t.timestamps
     end
