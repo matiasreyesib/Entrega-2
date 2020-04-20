@@ -3,6 +3,7 @@ class CreateDateOptions < ActiveRecord::Migration[6.0]
     create_table :date_options do |t|
       t.datetime :start_date
       t.datetime :end_date
+      t.references :event_id, null: false, foreign_key: true
 
       t.timestamps
     end

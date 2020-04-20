@@ -1,4 +1,4 @@
 class CommentReply < ApplicationRecord
   belongs_to :user
-  has_one :comment
+  belongs_to :comment
 end

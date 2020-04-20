@@ -1,4 +1,4 @@
 class DateVote < ApplicationRecord
-  belongs_to :user_id
-  belongs_to :casted_vote
+  belongs_to :user
+  has_one :date_option
 end
