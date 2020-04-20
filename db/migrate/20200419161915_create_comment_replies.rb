@@ -1,11 +1,12 @@
 class CreateCommentReplies < ActiveRecord::Migration[6.0]
   def change
     create_table :comment_replies do |t|
-      t.integer :user_id #referencia a id_usuario
+      t.references :user_id, null: false, foreign_key: true
       t.text :comment
-      t.integer :comment_reply #referencia a id_comment
+      t.references :comment_reply, null: false, foreign_key: true
 
       t.timestamps
     end
   end
 end
+#ESTA_CHECK

@@ -1,11 +1,12 @@
 class CreateComments < ActiveRecord::Migration[6.0]
   def change
     create_table :comments do |t|
-      t.integer :user_id #referencia a id_usuario
+      t.references :user_id, null: false, foreign_key: true
       t.text :comment
-      t.integer :event_id #referencia a id_evento
+      t.references :event_id, null: false, foreign_key: true
 
       t.timestamps
     end
   end
 end
+#ESTA_CHECK

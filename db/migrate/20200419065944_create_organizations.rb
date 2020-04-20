@@ -3,8 +3,10 @@ class CreateOrganizations < ActiveRecord::Migration[6.0]
     create_table :organizations do |t|
       t.string :name
       t.text :description
+      t.references :resource, null: false, foreign_key: true
 
       t.timestamps
     end
   end
 end
+#ESTA_CHECK
