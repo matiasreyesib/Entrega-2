@@ -4,8 +4,8 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :description
       t.boolean :event_flag
-      t.references :event_creator, null: false, foreign_key: true
-      t.references :event_date, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
+      t.references :date_option, null: false, foreign_key: true
       t.boolean :private
       t.references :resource, null: false, foreign_key: true
 
